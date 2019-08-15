@@ -1,7 +1,9 @@
+
 body {
     text-align: center;
     margin: 0;
     }
+
 main {
     width: 850px;
     margin: 35px auto;
@@ -39,6 +41,7 @@ p {
 ul {
     text-align: center;
 }
+
 a {
     text-decoration: none;
     font-family: "Raleway", sans-serif;
@@ -80,14 +83,6 @@ h4 a {
 
 }    
 
-.youtube {
-    color: #c4302b;
-}
-
-.social {
-    color: #1da1f2;
-}
-
 footer {
     text-transform: uppercase;
     padding: 0 20px;
@@ -97,6 +92,15 @@ footer {
     letter-spacing: 0.8em;
     font-weight: 500;
 }
+
+.youtube {
+    color: #c4302b;
+}
+
+.social {
+    color: #1da1f2;
+}
+
 .copyright {
     float: left;
 }
