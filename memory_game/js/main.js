@@ -1,5 +1,4 @@
 
-//alert('Hello, friends.');
 const cards = [ 
     {
         rank: "queen",
@@ -24,28 +23,53 @@ const cards = [
 ];
 const cardsInPlay = [];
 
-function checkForMatch(){
+
+function checkForMatch() {
+
     if ( cardsInPlay[0] === cardsInPlay[1]) {
         alert("You found a match!");
     } else {
         alert("Sorry, try again.");
     }
 }
-function flipCard(cardId){
+function flipCard() {
    
-    console.log("User flipped " + cards[cardId].rank);
-    console.log(cards[cardId].cardImage);
-    console.log(cards[cardId].suit);
+    var cardId = this.getAttribute('data-id');
+
     cardsInPlay.push(cards[cardId].rank);
+
+    this.setAttribute('src', cards[cardId].cardImage);
 
     if ( cardsInPlay.length === 2 ) {
         checkForMatch();
     } 
 }
 
-//calling the function for testing purposes.
 
-flipCard(0);
-flipCard(2);
+function createBoard() {
+
+    for (let i = 0; i < cards.length; i++) {
+     
+     var cardElement = document.createElement('img');
+
+     cardElement.setAttribute('src', 'images/back.png');
+     cardElement.setAttribute('data-id', i);
+
+     cardElement.addEventListener('click', flipCard);
+     document.getElementById('game-board').appendChild(cardElement);
+    }
+};
+
+var resetGame = function () {
+    
+    for (var i = 0; i < cards.length; i++) {
+       document.getElementsByTagName('img')[i].setAttribute('src', 'images/back.png');   
+    } 
+  };
+
+document.querySelector('.reset-button').addEventListener('click', resetGame);
+
+createBoard();
+
 
 

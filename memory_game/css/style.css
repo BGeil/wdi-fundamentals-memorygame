@@ -114,6 +114,26 @@ footer {
     font-weight: 700;
 }
 
+.reset-button { 
+    background: #00a6b3;
+    color: white;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.reset-button:hover {
+    background: #F15B31;
+    transition: 0.25s ease;
+}
+
+.reset-button:focus {
+    outline: none;
+}
+
 .clearfix:after {
     visibility: hidden;
     display: block;
